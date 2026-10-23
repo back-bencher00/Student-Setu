@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Student Setu helps students discover study notes, practice quizzes, coding resources, and study planning tools.">
+  <title>Student Setu — Learn smarter, together</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Student Setu home">
+      <span class="brand-mark">S</span><span>Student<span class="brand-accent">Setu</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav" id="nav">
+      <a href="#resources">Resources</a>
+      <a href="#quiz">Quick quiz</a>
+      <a href="#planner">Study planner</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="header-cta" href="#resources">Explore resources <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR STUDY COMPANION</div>
+        <h1>Make learning<br>feel <span class="gradient-text">less difficult.</span></h1>
+        <p class="hero-description">Find study resources, test your understanding, and plan your next study session — all in one simple place.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#resources">Explore resources <span>→</span></a>
+          <a class="button button-secondary" href="#planner">Plan my study</a>
+        </div>
+        <div class="hero-proof">
+          <div class="avatar-stack"><span>📘</span><span>💻</span><span>🧠</span></div>
+          <p><strong>Built for students</strong><br><span>Learn at your own pace</span></p>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="visual-glow"></div>
+        <div class="dashboard-card">
+          <div class="dash-top"><div><span class="tiny-label">YOUR LEARNING SPACE</span><h3>Good things take practice.</h3></div><span class="dash-icon">✦</span></div>
+          <div class="progress-heading"><span>This week's focus</span><strong id="heroProgressText">3 of 5 sessions</strong></div>
+          <div class="progress-track"><div class="progress-fill" style="width:60%"></div></div>
+          <div class="mini-grid">
+            <div class="mini-card mini-purple"><span class="mini-symbol">✎</span><span class="mini-number">Notes</span><small>Review concepts</small></div>
+            <div class="mini-card mini-yellow"><span class="mini-symbol">◉</span><span class="mini-number">Practice</span><small>Check your skills</small></div>
+          </div>
+          <div class="today-row"><span class="today-check">✓</span><div><strong>One small step today</strong><small>Consistency beats cramming.</small></div><span class="sparkle">✦</span></div>
+        </div>
+        <div class="floating-note"><span class="floating-icon">💡</span><div><strong>Keep it simple</strong><small>Learn one concept at a time.</small></div></div>
+      </div>
+      <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
+    </section>
+
+    <section class="trust-strip">
+      <span>STUDY SMARTER, NOT HARDER</span><i></i><span>FREE TO GET STARTED</span><i></i><span>MADE FOR LEARNERS</span>
+    </section>
+
+    <section class="section resources-section" id="resources">
+      <div class="section-heading">
+        <div><div class="eyebrow">LEARNING LIBRARY</div><h2>What do you want to <span class="gradient-text">learn today?</span></h2></div>
+        <p>Explore these starter resources. Add your own verified notes and links as your library grows.</p>
+      </div>
+      <div class="search-wrap"><span class="search-icon">⌕</span><input id="resourceSearch" type="search" placeholder="Search subjects, topics, or skills..." aria-label="Search resources"><span class="search-shortcut">Search</span></div>
+      <div class="filter-row" id="filterRow">
+        <button class="filter-chip active" data-filter="All">All resources</button>
+        <button class="filter-chip" data-filter="AKTU">AKTU basics</button>
+        <button class="filter-chip" data-filter="Coding">Coding</button>
+        <button class="filter-chip" data-filter="Skills">Study skills</button>
+      </div>
+      <div class="resource-grid" id="resourceGrid">
+        <article class="resource-card" data-category="AKTU" data-search="engineering mathematics algebra calculus matrices">
+          <div class="card-art art-lilac"><span class="art-icon">∑</span><span class="art-label">FOUNDATION</span></div>
+          <div class="resource-content"><div class="resource-meta"><span>AKTU BASICS</span><span>•</span><span>Maths</span></div><h3>Engineering Mathematics</h3><p>Build your foundation with key concepts and practice topics.</p><a href="https://aktu.ac.in/" target="_blank" rel="noopener noreferrer" class="text-link">Find syllabus <span>↗</span></a></div>
+        </article>
+        <article class="resource-card" data-category="AKTU" data-search="engineering physics waves optics electricity fundamentals">
+          <div class="card-art art-blue"><span class="art-icon">◉</span><span class="art-label">CONCEPTS</span></div>
+          <div class="resource-content"><div class="resource-meta"><span>AKTU BASICS</span><span>•</span><span>Physics</span></div><h3>Engineering Physics</h3><p>Organise important concepts, formulas, and revision topics.</p><a href="https://aktu.ac.in/" target="_blank" rel="noopener noreferrer" class="text-link">Find syllabus <span>↗</span></a></div>
+        </article>
+        <article class="resource-card" data-category="Coding" data-search="c programming variables loops functions arrays beginner">
+          <div class="card-art art-yellow"><span class="art-icon">{ }</span><span class="art-label">START CODING</span></div>
+          <div class="resource-content"><div class="resource-meta"><span>CODING</span><span>•</span><span>Beginner</span></div><h3>C Programming Starter</h3><p>Practise variables, conditions, loops, functions, and arrays.</p><a href="https://www.learn-c.org/" target="_blank" rel="noopener noreferrer" class="text-link">Learn C <span>↗</span></a></div>
+        </article>
+        <article class="resource-card" data-category="Coding" data-search="html css javascript web development frontend">
+          <div class="card-art art-mint"><span class="art-icon">&lt;/&gt;</span><span class="art-label">BUILD PROJECTS</span></div>
+          <div class="resource-content"><div class="resource-meta"><span>CODING</span><span>•</span><span>Web development</span></div><h3>Web Development</h3><p>Learn how HTML, CSS, and JavaScript work together.</p><a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank" rel="noopener noreferrer" class="text-link">Open learning guide <span>↗</span></a></div>
+        </article>
+        <article class="resource-card" data-category="Skills" data-search="study planning revision focus habits active recall">
+          <div class="card-art art-peach"><span class="art-icon">✦</span><span class="art-label">STUDY BETTER</span></div>
+          <div class="resource-content"><div class="resource-meta"><span>STUDY SKILLS</span><span>•</span><span>Productivity</span></div><h3>Study Smarter</h3><p>Try short study sessions, active recall, and regular revision.</p><a href="#planner" class="text-link">Make a plan <span>→</span></a></div>
+        </article>
+        <article class="resource-card" data-category="Skills" data-search="communication english speaking presentation confidence">
+          <div class="card-art art-rose"><span class="art-icon">Aa</span><span class="art-label">COMMUNICATION</span></div>
+          <div class="resource-content"><div class="resource-meta"><span>STUDY SKILLS</span><span>•</span><span>Communication</span></div><h3>Communication Practice</h3><p>Improve presentation structure, vocabulary, and confidence.</p><a href="https://learnenglish.britishcouncil.org/" target="_blank" rel="noopener noreferrer" class="text-link">Practise English <span>↗</span></a></div>
+        </article>
+      </div>
+      <div id="noResults" class="no-results" hidden>No matching resources. Try another search term or filter.</div>
+      <p class="disclaimer">Note: These are starter links, not official notes or a guarantee of exam coverage. Always verify your current syllabus and study materials.</p>
+    </section>
+
+    <section class="section feature-section" id="quiz">
+      <div class="feature-copy"><div class="eyebrow">QUICK KNOWLEDGE CHECK</div><h2>Small quiz.<br><span class="gradient-text">Big progress.</span></h2><p>Check your understanding with a short web-development question. Choose an answer to see feedback instantly.</p><div class="feature-points"><span>✓ Instant feedback</span><span>✓ Beginner-friendly</span><span>✓ No sign-up required</span></div></div>
+      <div class="quiz-card">
+        <div class="quiz-top"><span class="quiz-badge">QUICK QUIZ</span><span id="questionCount">QUESTION 1 OF 3</span></div>
+        <div class="quiz-progress"><div id="quizProgressFill"></div></div>
+        <h3 id="quizQuestion">What does CSS mainly control on a website?</h3>
+        <div class="quiz-options" id="quizOptions">
+          <button class="quiz-option" data-answer="0"><span>A</span> Website styling and layout</button>
+          <button class="quiz-option" data-answer="1"><span>B</span> Database storage</button>
+          <button class="quiz-option" data-answer="2"><span>C</span> Internet speed</button>
+        </div>
+        <div class="quiz-feedback" id="quizFeedback" aria-live="polite"></div>
+        <div class="quiz-bottom"><span id="quizScore">Score: 0</span><button class="text-link" id="nextQuestion" disabled>Next question →</button></div>
+      </div>
+    </section>
+
+    <section class="section planner-section" id="planner">
+      <div class="section-heading"><div><div class="eyebrow">MAKE A LITTLE PROGRESS</div><h2>Your simple <span class="gradient-text">study planner.</span></h2></div><p>Write down a few tasks for today. Your checklist stays in this browser on this device.</p></div>
+      <div class="planner-layout">
+        <div class="planner-intro"><div class="planner-icon">☀</div><h3>One task at a time.</h3><p>You don't need a perfect timetable. Start with the next useful step.</p><div class="planner-stat"><strong id="taskCount">0/0</strong><span>tasks completed</span></div><div class="planner-track"><div id="taskProgress"></div></div></div>
+        <div class="planner-app"><form id="taskForm" class="task-form"><label class="sr-only" for="taskInput">Add a study task</label><input id="taskInput" type="text" maxlength="100" placeholder="e.g. Revise 2 maths concepts" required><button class="button button-primary" type="submit">+ Add task</button></form><ul id="taskList" class="task-list"></ul><div class="planner-empty" id="plannerEmpty">Your plan starts with one task. Add it above ✨</div><button class="clear-button" id="clearCompleted" type="button">Clear completed tasks</button></div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="about"><div class="cta-shape">✦</div><div class="eyebrow">YOUR NEXT STEP STARTS HERE</div><h2>Learn something useful<br>today.</h2><p>Keep learning, keep building, and share helpful resources with your classmates.</p><a class="button button-light" href="#resources">Explore the library <span>→</span></a></section>
+  </main>
+
+  <footer class="footer"><a class="brand" href="#"><span class="brand-mark">S</span><span>Student<span class="brand-accent">Setu</span></span></a><p>Made to make learning feel more approachable.</p><div class="footer-links"><a href="#resources">Resources</a><a href="#planner">Planner</a><a href="#about">About</a></div><small>© <span id="year"></span> Student Setu. Educational starter project.</small></footer>
+  <script src="script.js"></script>
+</body>
+</html>
